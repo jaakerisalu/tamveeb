@@ -1,6 +1,6 @@
 import datetime
 from django.views.generic import TemplateView
-from backend.models import Concert, CarouselSlide
+from backend.models import Concert, CarouselSlide, AboutUsTextBlock
 
 
 class MusicView(TemplateView):
@@ -13,6 +13,7 @@ class MusicView(TemplateView):
 
         context.update({
             'concerts': Concert.objects.filter(date__gte=now.date()),
+            #'songs': Song.objects.all()
         })
         return self.render_to_response(context)
 
@@ -27,5 +28,17 @@ class LandingView(TemplateView):
             'slides': CarouselSlide.objects.all(),
         })
 
-        print(context['slides'])
+        return self.render_to_response(context)
+
+
+class AboutUsView(TemplateView):
+    template_name = 'meist.html'
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+
+        context.update({
+            'text_blocks': list(AboutUsTextBlock.objects.all()),  # Ma teen siin QuerySeti listiks, et templates VIIMAST saaks küsida
+        })
+
         return self.render_to_response(context)

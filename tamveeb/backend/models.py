@@ -27,6 +27,10 @@ def path_prefix(prefix):
 def random_carousel_image_path(instance, filename):
     return random_path(instance, filename)
 
+@path_prefix('about_us')
+def random_about_us_image_path(instance, filename):
+    return random_path(instance, filename)
+
 class Concert(models.Model):
     date = models.DateField('Kuupäev')
     time = models.TimeField('Kellaaeg')
@@ -56,6 +60,28 @@ class CarouselSlide(models.Model):
     link = models.CharField('Nupu link', choices=LINK_CHOICES, help_text='Mis lehele meie saidil antud slaid viitab', max_length=20)
     anchor = models.CharField('Nupu lingi ankur', max_length=255, help_text='Kui tahad et link viiks mõne lehel asuva ankru juurde, siis kirjuta see siia', blank=True, null=True)
     image = models.ImageField('Pilt', upload_to=random_carousel_image_path)
+
+    def __str__(self):
+        return self.title
+
+
+class AboutUsTextBlock(models.Model):
+    LEFT = 'left'
+    RIGHT = 'right'
+    ALIGNMENT_CHOICES = (
+        (LEFT, 'Vasakul'),
+        (RIGHT, 'Paremal'),
+    )
+
+    alignment = models.CharField('Pildi asukoht', choices=ALIGNMENT_CHOICES, help_text='Kummal pool teksti asub pilt', max_length=20)
+    title = models.CharField('Pealkiri', max_length=255)
+    content = models.TextField('Sisu', help_text="Sisu")
+    image = models.ImageField('Pilt', upload_to=random_about_us_image_path)
+
+    order = models.SmallIntegerField('Järjekord', help_text='Väiksem = ülevalpool', default=0)
+
+    class Meta:
+        ordering = ['order', 'title']
 
     def __str__(self):
         return self.title
