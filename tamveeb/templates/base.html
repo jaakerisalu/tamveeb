@@ -1,0 +1,141 @@
+{% load staticfiles %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tehnika&uuml;likooli Akadeemiline Meeskoor">
+    <meta property="og:description" content="Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht">
+    <meta name="keywords" content="Choir, music, singing">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tehnika&uuml;likooli Akadeemiline Meeskoor" />
+    <meta property="og:image" content="logo/tam.png" />
+    <meta property="og:title" content="{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor{% endblock %}" />
+    <meta property="og:url" content="{% block og_url %}http://www.meeskoor.ee/{% endblock %}" />
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+
+    {% compress css %}
+        <link href="{% static 'css/bootstrap-custom.css' %}" rel="stylesheet">
+        <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+        <link href="{% static 'css/old_main.css' %}" rel="stylesheet">
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    {% endcompress %}
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body class="{% block body_classes %}{% endblock %}">
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav id="navigationBar" class="navbar navbar-inverse navbar-static-top">
+                <div id="navigationBarDiv" class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div>
+                            <a href="{% url 'home' %}">
+                                <div id="imageDiv">
+                                    <img src="{% static 'images/logo/tam.png' %}" height="50em" width="50em" alt="TAM">
+                                </div>
+                                <div id="titleDiv">
+                                    <div id="title" class="navbar-brand">Tehnika&uuml;likooli Akadeemiline Meeskoor</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="{% url 'muusika' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Muusika <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'muusika' %}#kontserdid">Kontserdid</a></li>
+                                    <!--<li><a href="muusika.html#salvestised">Salvestised</a></li>-->
+                                    <li><a href="{% url 'muusika' %}#repertuaar">Repertuaar</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{% url 'meist' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meist <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'meist' %}#pohivaartused">P&otilde;hiv&auml;&auml;rtused</a></li>
+                                    <li><a href="{% url 'meist' %}#traditsioonid">Traditsioonid</a></li>
+                                    <li><a href="{% url 'meist' %}#dirigendid">Dirigendid</a></li>
+                                    <li><a href="{% url 'meist' %}#juhatus">Juhatus</a></li>
+                                    <li><a href="{% url 'meist' %}#ajalugu">Ajalugu</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{% url 'kontakt' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kontakt <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'kontakt' %}#votauhendust">V&otilde;ta meiega &uuml;hendust</a></li>
+                                    <li><a href="{% url 'kontakt' %}#telliesinemine">Telli esinemine</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{% url 'topelttuur' %}" role="button" aria-haspopup="true" aria-expanded="false">Topelttuur</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    {% block content %}{% endblock content %}
+
+    <div class="container">
+        <div id="sponsor-block" class="row">
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.storaenso.com/"><img class="img-circle" src="{% static 'images/logo/storaenso.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.kaubamaja.ee/"><img class="img-circle" src="{% static 'images/logo/kaubamaja.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.kuku.ee/"><img class="img-circle" src="{% static 'images/logo/kuku.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.saku.ee/"><img class="img-circle" src="{% static 'images/logo/saku.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.ttu.ee/"><img class="img-circle" src="{% static 'images/logo/ttu.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+            <div class="col-md-2 col-xs-4 text-center">
+                <a href="http://www.hansabuss.ee/"><img class="img-circle" src="{% static 'images/logo/hansabuss.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
+            </div>
+        </div>
+
+        <footer>
+            <p class="pull-right"><a id="logIn" href="http://www.tam.ee/siseinfo/">Logi sisse</a></p>
+            <p>
+                &copy;
+                <script language="JavaScript" type="text/javascript">
+                    now = new Date;
+                    theYear=now.getYear();
+                    if (theYear < 1900)
+                        theYear=theYear+1900;
+                    document.write(theYear)
+                </script>
+                Tehnika&uuml;likooli Akadeemiline Meeskoor
+            </p>
+        </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/jquery-1.11.1.min.js' %}"><\/script>')</script>
+    {% compress js %}
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    {% endcompress %}
+    {% block scripts %}{% endblock scripts %}
+  </body>
+</html>

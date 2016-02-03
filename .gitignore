@@ -1,0 +1,19 @@
+# Ignore everything in .idea
+.idea
+
+*.pyo
+*.pyc
+.sass-cache/
+npm-debug.log
+node_modules/
+venv/
+
+tamveeb/settings/local.py
+tamveeb/db.sqlite3
+tamveeb/assets/
+tamveeb/media/
+tamveeb/static/bower_components/
+
+tamveeb/.cache
+tamveeb/.coverage
+tamveeb/cover/

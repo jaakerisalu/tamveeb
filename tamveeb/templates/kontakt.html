@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block og_url %}http://www.meeskoor.ee/kontakt/{% endblock %}
+{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt{% endblock %}
+{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt{% endblock %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container-fluid">
+    <div id="jumbotron" class="jumbotron" style="background-image: url('../static/images/navbar/kontakt.jpg'); background-repeat: no-repeat; background-position: center;">
+        <div style="padding-left: 4em; padding-right: 4em;">
+            <h1><span class="header-text">Kontakt</span></h1>
+            <p><span class="header-text">Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama ka kitsamas ringis.</span></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="featurette" class="row featurette">
+            <div id="featuretteText" class="col-md-9">
+                <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">V&otilde;ta meiega &uuml;hendust</h2>
+                <h3>Tehnikaülikooli Akadeemiline Meeskoor</h3><p>Aadress: Ehitajate tee 5, 19086 Tallinn<br>Telefon: +372 50 79 079<br>E-post: <a href="mailto:meeskoor@ttu.ee">meeskoor@ttu.ee</a>, <a href="mailto:meeskoor.finants@ttu.ee">meeskoor.finants@ttu.ee</a> (lepingud, arved jms)<br>Koduleht: <a href="http://www.meeskoor.ee/">http://www.meeskoor.ee/</a></p><h3>MTÜ Tallinna Tehnikaülikooli Akadeemiline Meeskoor</h3><p>Aadress: Ehitajate tee 5, 19086 Tallinn<br>Registri nr: 80106706<br>KM kohuslase nr: EE100606964</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: #f6f6f6">
+        <div class="container">
+            <div id="featurette" class="row featurette" style="background-color: #f6f6f6">
+                <div class="col-md-9 col-md-push-3 featuretteText scrollable">
+                    <h2 id="telliesinemine" class="featurette-heading">Telli esinemine</h2>
+                    <p class="lead">V&otilde;imas ja &uuml;lev meestelaul sobib kaunistama Teie s&uuml;ndmust, olgu see siis Teie ettev&otilde;tte t&auml;htp&auml;ev, j&otilde;ulupidu v&otilde;i avamine, ning annab sellele juurde ainulaadset pidulikkust. Meie repertuaar pakub lisaks meeskoorilaulu klassikale ka valikut evergreen-muusikast a cappella või orkestriga.##Repertuaari ja tingimuste t&auml;psustamiseks palume v&otilde;tta meiega &uuml;hendust telefonil +372 55 575 106 v&otilde;i aadressil meeskoor@ttu.ee.</p>
+                </div>
+                <div class="col-md-3 col-md-pull-9">
+                    <img id="featuretteImageLeft" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{% static 'images/telliesinemine.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
