@@ -17,12 +17,14 @@ body {
 }
 
 #logIn,
+#language,
 #privacy,
 #terms {
   color: #397fbd;
 }
 
 #logIn:hover,
+#language:hover,
 #privacy:hover,
 #terms:hover {
   color: #1A69AF;
@@ -33,6 +35,7 @@ body {
   border-radius: 0px;
   background-color: rgba(250, 250, 250, 1.0);
   opacity: inherit;
+  margin-bottom: 0;
 }
 
 #navigationBarDiv {
@@ -52,7 +55,7 @@ body {
   color: #FFF;
   background-color: #DF7900;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -71,12 +74,21 @@ body {
   display: inline-block;
 }
 
-#title:visited {
+#title:visited  {
   color: #8a8a88;
 }
 
 #title:hover {
   color: #8a8a88;
+}
+
+#languageDiv {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#languageParagraph{
+	text-align: right;
 }
 
 #sponsor-block {
@@ -92,7 +104,7 @@ body {
   padding-bottom: 3em;
 }
 
-#topelttuur {
+#lisaleht {
   margin-bottom: 30px;
 }
 
@@ -116,8 +128,9 @@ body {
   padding-right: 40px;
 }
 
-#featuretteTable {
-  margin-left: 1em;
+.header-text {
+  font-family: opensans-regular;
+  text-shadow: 0 0 10px #000000;
 }
 
 #jumbotron {
@@ -158,6 +171,11 @@ body {
   border: none;
 }
 
+.navbar-toggle {
+  margin-top: 14px;
+  margin-right: -0.1em;
+}
+
 .navbar-inverse .navbar-toggle {
   border-color: #8a8a88;
 }
@@ -179,7 +197,6 @@ body {
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav>li>a {
-  /*padding-top: 1.20em;*/
   color: #8a8a88;
 }
 
@@ -219,6 +236,7 @@ body {
   right: 0;
   left: 0;
   z-index: 20;
+  position: relative;
 }
 
 .navbar-wrapper > .container {
@@ -240,6 +258,7 @@ body {
 .carousel {
   height: calc(100vh - 70px);
   margin-top: 12px;
+  margin-bottom: 0;
 }
 
 .carousel-slide {
@@ -263,10 +282,12 @@ body {
   background-color: rgba(0,0,0,0.7);
   border-radius: 10px;
   bottom: 25%;
+  font-family: opensans-regular;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .carousel .item {
-  height: 500px;
   background-color: #777;
 }
 
@@ -280,13 +301,17 @@ body {
 }
 
 .carousel-indicators {
- bottom: 0;
+  bottom: 0;
+	opacity: 0.5;
+	width: 20%;
+	margin-left: -10%;
+}
+
+.carousel-indicators:hover {
+	opacity: 0.9;
 }
 
 /* MARKETING CONTENT */
-.marketing {
-  /*margin-top: -100px;*/
-}
 .marketing .col-lg-4 {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -333,8 +358,8 @@ body {
 }
 
 .buy-link .glyphicon {
-    font-size: 19px;
-    color: #FFF;
+  font-size: 19px;
+  color: #FFF;
 	padding-top: 0.05em;
 	padding-right: 0.1em;
 }
@@ -373,13 +398,21 @@ body {
 }
 
 /* RESPONSIVE CSS */
-@media (max-width: 380px) {
-  #title {
-    font-size: 15px;
+@media (max-width: 500px) {
+  .navbar-header #title {
+    display: none;
+  }
+
+  .navbar-header #imageDiv:after {
+    display: block;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+	.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    padding-top: 1.10em;
+	}
+	
   .jumbotron {
     text-align: center;
   }
@@ -388,16 +421,56 @@ body {
     width: 70px;
     height: 70px;
   }
-
-}
-
-@media (max-width: 500px) {
-  .navbar-header #title {
-    display: none;
+  
+  .carousel-caption p {
+		padding-left: 20px;
+		padding-right: 20px;	
   }
+  
+  .featurette-heading {
+		text-align: center; 
+  }
+	
+	.carousel-indicators {
+    bottom: 5%;
+  }
+	
+	.carousel {
+		height: calc(100vh - 60px);
+	}
+	
+	.carousel-inner {
+		height: calc(100vh + 10px);
+	}
 
-  .navbar-header #imageDiv:after {
-    display: block;
+	.carousel-slide {
+		height: calc(100vh - 60px);
+	}
+	
+	.carousel-caption {
+	  padding-top: 0px;
+		padding-bottom: 10px;
+		max-width: 70%;
+		bottom: 35%;
+	}
+	
+	#languageParagraph{
+		text-align: left;
+	}
+	
+	#redirectDiv {
+		margin-top: -70px;
+		padding-bottom: 0em;
+	}
+	
+	h1 {
+		font-size: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	img {
+		margin-top: 0.3em;  
   }
 }
 
@@ -421,11 +494,11 @@ body {
   }
 
   .carousel-caption p {
-	margin-bottom: 20px;
-	font-size: 21px;
-	line-height: 1.4;
-	padding-left: 10px;
-	padding-right: 10px;
+		margin-bottom: 20px;
+		font-size: 21px;
+		line-height: 1.4;
+		padding-left: 20px;
+		padding-right: 20px;
   }
 
   .featurette-heading {
@@ -451,11 +524,11 @@ body {
   }
 
   .carousel-indicators {
-   bottom: 100px;
+    bottom: 12%;
   }
 
   .carousel-caption {
-    bottom: 20px;
+    bottom: 30%;
   }
 
   #sponsor-block .img-circle {
