@@ -4,41 +4,23 @@
 {% block content %}
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
+            {% for slide in slides %}
+                <li data-target="#myCarousel" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
+            {% endfor %}
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div class="carousel-slide first-slide" style="background-image:url('static/images/carousel/kuulamuusikat.jpg');" alt="First slide"></div>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1><span>Kuula muusikat</span></h1>
-                        <p><span>T&auml;ispikad palad on saadaval poodides: <a id="carouselLink" href="http://www.amazon.com/s/ref=ntt_srch_drd_B00DSCVWYK?ie=UTF8&field-keywords=Academic%20Male%20Choir%20of%20Tallinn%20University%20of%20Technology&index=digital-music&search-type=ss">Amazon</a>, <a id="carouselLink" href="https://itunes.apple.com/us/artist/academic-male-choir-tallinn/id670019194">iTunes</a>, <a id="carouselLink" href="http://open.spotify.com/artist/4pRyf90uIqMQYfbSU3p2Ay">Spotify</a> jt.</span></p>
-                        <p><a id="carouselButton" class="btn btn-lg btn-link" href="{% url 'muusika' %}#repertuaar" role="button">Kuula siit</a></p>
+            {% for slide in slides %}
+                <div class="item {% if forloop.first %}active{% endif %}">
+                    <div class="carousel-slide first-slide" style="background-image:url('{{ slide.image.url }}');" alt="Slide {{ forloop.counter }}"></div>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1><span>{{ slide.title }}</span></h1>
+                            <p><span>{{ slide.content|safe }}</span></p>
+                            <p><a id="carouselButton" class="btn btn-lg btn-link" href="{{ slide.link }}{% if slide.anchor %}#{{ slide.anchor }}{% endif %}" role="button">{{ slide.link_text }}</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="carousel-slide second-slide" style="background-image:url('static/images/carousel/tulekontserdile.jpg');" alt="Second slide"></div>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1><span>Tule kontserdile</span></h1>
-                        <p><span>Alanud s&uuml;gisel s&otilde;idab koor m&ouml;&ouml;da Eestimaa erinevaid linnasid ja ootab k&otilde;iki oma s&otilde;pru hubastest kontsertidest osa saama.</span></p>
-                        <p><a id="carouselButton" class="btn btn-lg btn-link" href="{% url 'muusika' %}#kontserdid" role="button">Vaata ajakava<!--Osta pilet--></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="carousel-slide third-slide" style="background-image:url('static/images/carousel/kutsumeidesinema.jpg');" alt="Third slide"></div>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1><span>Kutsu meid esinema</span></h1>
-                        <p><span>V&otilde;imas ja &uuml;lev meestelaul sobib kaunistama Teie s&uuml;ndmust, olgu see siis Teie ettev&otilde;tte t&auml;htp&auml;ev, j&otilde;ulupidu v&otilde;i avamine.</span></p>
-                        <p><a id="carouselButton" class="btn btn-lg btn-link" href="{% url 'muusika' %}#telliesinemine" role="button">Loe edasi</a></p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

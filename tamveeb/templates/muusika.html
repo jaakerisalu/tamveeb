@@ -21,6 +21,7 @@
         </div>
         <div id="featuretteTable" class="col-md-12 table-responsive">
             <table class="table table-striped">
+
                 <thead>
                 <tr>
                     <th>Kuup&auml;ev</th>
@@ -31,6 +32,22 @@
                 </tr>
                 </thead>
                 <tbody>
+                {% for concert in concerts %}
+                    <tr>
+                        <td>{{ concert.date|date:"d.m.Y" }}</td>
+                        <td>{{ concert.time|time:"H:i"  }}</td>
+                        <td><b>{{ concert.name }}</b></td>
+                        <td>{{ concert.location }}</td>
+                        <td>
+                            {% if concert.ticket_sales_site %}
+                                <a href="{{ concert.ticket_sales_site }}" class="buy-link"><span class="glyphicon glyphicon-euro"></span></a>
+                            {% endif %}
+
+                        </td>
+                    </tr>
+                    {{ concert.name }}
+                    {{ concert.location }}
+                {% endfor %}
                 <tr>
                     <td>12.12.2015</td>
                     <td>17:00</td>

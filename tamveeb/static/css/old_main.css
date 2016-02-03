@@ -96,6 +96,13 @@ body {
   padding-bottom: 3em;
 }
 
+#sponsor-row {
+	font-size: 18px; 
+	width: 100%; 
+	text-align: center; 
+	padding-top: 100px;
+}
+
 #sponsor-block .img-circle {
   margin-bottom: 20px;
 }
