@@ -13,6 +13,38 @@
         </div>
     </div>
 
+    {% for block in text_blocks %}
+        {% if not forloop.last %}
+            {% if block.alignment == 'right' %}
+                <div class="container">
+                    <div id="featurette" class="row featurette">
+                        <div class="col-md-9 featuretteText scrollable">
+                            <h2 id="{{ block.title|lower }}" class="featurette-heading">{{ block.title }}</h2>
+                            <p class="lead">{{ block.content }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img id="featuretteImageRight" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{{ block.image.url }}">
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="container-fluid" style="background-color: #f6f6f6">
+                    <div class="container">
+                        <div id="featurette" class="row featurette">
+                            <div class="col-md-9 col-md-push-3 featuretteText scrollable">
+                                <h2 id="{{ block.title|lower }}" class="featurette-heading">{{ block.title }}</h2>
+                                <p class="lead">{{ block.content }}</p>
+                            </div>
+                            <div class="col-md-3 col-md-pull-9">
+                                <img id="featuretteImageLeft" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{{ block.image.url }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
     <div class="container">
         <div id="featurette" class="row featurette">
             <div id="featuretteText" class="col-md-9">
@@ -21,17 +53,36 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid" style="background-color: #f6f6f6">
-        <div class="container">
-            <div id="featurette" class="row featurette" style="background-color: #f6f6f6">
-                <div class="col-md-9 col-md-push-3 featuretteText scrollable">
-                    <h2 id="telliesinemine" class="featurette-heading">Telli esinemine</h2>
-                    <p class="lead">V&otilde;imas ja &uuml;lev meestelaul sobib kaunistama Teie s&uuml;ndmust, olgu see siis Teie ettev&otilde;tte t&auml;htp&auml;ev, j&otilde;ulupidu v&otilde;i avamine, ning annab sellele juurde ainulaadset pidulikkust. Meie repertuaar pakub lisaks meeskoorilaulu klassikale ka valikut evergreen-muusikast a cappella või orkestriga.##Repertuaari ja tingimuste t&auml;psustamiseks palume v&otilde;tta meiega &uuml;hendust telefonil +372 55 575 106 v&otilde;i aadressil meeskoor@ttu.ee.</p>
+        {% with text_blocks|last as last_block %}
+        {% if block.alignment == 'right' %}
+                <div class="container">
+                    <div id="featurette" class="row featurette">
+                        <div class="col-md-9 featuretteText scrollable">
+                            <h2 id="{{ block.title|lower }}" class="featurette-heading">{{ last_block.title }}</h2>
+                            <p class="lead">{{ last_block.content }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <img id="featuretteImageRight" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{{ last_block.image.url }}">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-md-pull-9">
-                    <img id="featuretteImageLeft" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{% static 'images/telliesinemine.png' %}">
+            {% else %}
+                <div class="container-fluid" style="background-color: #f6f6f6">
+                    <div class="container">
+                        <div id="featurette" class="row featurette">
+                            <div class="col-md-9 col-md-push-3 featuretteText scrollable">
+                                <h2 id="{{ block.title|lower }}" class="featurette-heading">{{ last_block.title }}</h2>
+                                <p class="lead">{{ last_block.content }}</p>
+                            </div>
+                            <div class="col-md-3 col-md-pull-9">
+                                <img id="featuretteImageLeft" class="featurette-image img-responsive center-block" alt="Generic placeholder image" src="{{ last_block.image.url }}">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            {% endif %}
+    {% endwith %}
     </div>
 {% endblock content %}

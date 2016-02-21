@@ -3,7 +3,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic.base import TemplateView
-from backend.views import MusicView, LandingView, AboutUsView
+from backend.views import MusicView, LandingView, AboutUsView, ContactView
 
 admin.autodiscover()
 
@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^$', LandingView.as_view(), name='home'),
     url(r'^muusika/$', MusicView.as_view(), name='muusika'),
     url(r'^meist/$', AboutUsView.as_view(), name='meist'),
-    url(r'^kontakt/$', TemplateView.as_view(template_name='kontakt.html'), name='kontakt'),
+    url(r'^kontakt/$', ContactView.as_view(), name='kontakt'),
     url(r'^lisaleht/$', TemplateView.as_view(template_name='lisaleht.html'), name='lisaleht'),
 
     url(r'^tagauks/', include(admin.site.urls)),

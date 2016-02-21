@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+
     {% for block in text_blocks %}
         {% if not forloop.last %}
             {% if block.alignment == 'right' %}
@@ -45,6 +46,7 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+
     <div class="container">
         <div id="featurette" class="row featurette">
             <div id="featuretteText" class="col-md-9">
@@ -60,103 +62,20 @@
                         <th>Telefon</th>
                         <th>E-post</th>
                     </tr>
+                    {% for management in managements %}
                     <tr>
-                        <td>Peeter Perens</td>
-                        <td>Peadirigent</td>
-                        <td>56 470 167</td>
-                        <td><a href="mailto:peeterperens@gmail.com">peeterperens@gmail.com</a></td>
+                        <td>{{ management.name }}</td>
+                        <td>{{ management.job }}</td>
+                        <td>{{ management.phone }}</td>
+                        <td><a href="{{ management.email }}">{{ management.email }}</a></td>
                     </tr>
-                    <tr>
-                        <td>Siim Selis</td>
-                        <td>Dirigent</td>
-                        <td>50 17 730</td>
-                        <td><a href="mailto:siimselis@gmail.com">siimselis@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Janno Rohelsaar</td>
-                        <td>President</td>
-                        <td>56 243 977</td>
-                        <td>
-                            <a href="mailto:jannoro@hotmail.com">jannoro@hotmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Vahur Talvik</td>
-                        <td>Koorivanem</td>
-                        <td>53 444 415</td>
-                        <td>
-                            <a href="mailto:vahka@yahoo.com">vahka@yahoo.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Andres J&auml;rv</td>
-                        <td>V&auml;lissuhtleja</td>
-                        <td>55 575 106</td>
-                        <td><a href="mailto:andresjarv@gmail.com">andresjarv@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Maksim Butsenko</td>
-                        <td>Asjaajaja</td>
-                        <td>55 532 816</td>
-                        <td><a href="mailto:maksim.butsenko@gmail.com">maksim.butsenko@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Raul Mark</td>
-                        <td>Laekur</td>
-                        <td></td>
-                        <td><a href="mailto:meeskoor.finants@ttu.ee">meeskoor.finants@ttu.ee</a></td>
-                    </tr>
-                    <tr>
-                        <td>Peeter Aruvald</td>
-                        <td>Varahoidja</td>
-                        <td>51 39 744</td>
-                        <td><a href="mailto:peeter.aruvald@gmail.com">peeter.aruvald@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ilja Maljutenko</td>
-                        <td>Kroonik</td>
-                        <td>53 660 886</td>
-                        <td><a href="mailto:iljamal@gmail.com">iljamal@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Rene J&otilde;eleht</td>
-                        <td>Kroonik II (turundus)</td>
-                        <td>50 38 836</td>
-                        <td><a href="mailto:rene.joeleht@gmail.com">rene.joeleht@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Mart Ratas</td>
-                        <td>Noodikogu hoidja</td>
-                        <td>56 223 859</td>
-                        <td><a href="mailto:mart.ratas@gmail.com">mart.ratas@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sergei Zonov</td>
-                        <td>I tenori vanem</td>
-                        <td>53 457 237</td>
-                        <td><a href="mailto:zonov@hotmail.com">zonov@hotmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ott Lehtmets</td>
-                        <td>II tenori vanem</td>
-                        <td>51 64 571</td>
-                        <td><a href="mailto:ott@kossuleht.ee">ott@kossuleht.ee</a></td>
-                    </tr>
-                    <tr>
-                        <td>Aivar Koodi</td>
-                        <td>Baritoni vanem</td>
-                        <td>56 494 271</td>
-                        <td><a href="mailto:aivar.koodi@gmail.com">aivar.koodi@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dan Rodionov</td>
-                        <td>Bassi vanem</td>
-                        <td>58 055 170</td>
-                        <td><a href="mailto:danrod@hot.ee">danrod@hot.ee</a></td>
-                    </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
     {% with text_blocks|last as last_block %}
         {% if block.alignment == 'right' %}
                 <div class="container">

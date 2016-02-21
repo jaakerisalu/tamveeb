@@ -45,43 +45,7 @@
 
                         </td>
                     </tr>
-                    {{ concert.name }}
-                    {{ concert.location }}
                 {% endfor %}
-                <tr>
-                    <td>12.12.2015</td>
-                    <td>17:00</td>
-                    <td><b>"Topelttuur" Türi/Paide Topeltkontsert</b></td>
-                    <td>Türi Kultuurimaja ja Paide Kultuurimaja</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>05.03.2016</td>
-                    <td>19:00</td>
-                    <td><b>Tehnika&uuml;likooli Akadeemiline Meeskoor 70 Juubeligala "Ballaadid"</b></td>
-                    <td>P&auml;rnu kontserdimaja</td>
-                    <td>
-                        <a href="https://www.piletimaailm.com/performances/56636/buy" class="buy-link"><span class="glyphicon glyphicon-euro"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>28.03.2016</td>
-                    <td>19:00</td>
-                    <td><b>Tehnika&uuml;likooli Akadeemiline Meeskoor 70 Juubeligala "Ballaadid"</b></td>
-                    <td>Estonia kontserdisaal</td>
-                    <td>
-                        <a href="https://www.piletimaailm.com/performances/56560/buy" class="buy-link"><span class="glyphicon glyphicon-euro"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>23.04.2016</td>
-                    <td>19:00</td>
-                    <td><b>Tehnika&uuml;likooli Akadeemiline Meeskoor 70 Juubeligala "Ballaadid"</b></td>
-                    <td>Vanemuise kontserdimaja</td>
-                    <td>
-                        <a href="https://www.piletimaailm.com/performances/55760/buy" class="buy-link"><span class="glyphicon glyphicon-euro"></span></a>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </div>
@@ -104,228 +68,21 @@
                         </tr>
                         </thead>
                         <tbody>
+                        {% for repertory in repertorys %}
                         <tr>
-                            <td><b>Meeste laul</b></td>
-                            <td>Veljo Tormis</td>
-                            <td>Paul-Eerik Rummo</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Q-48Jg396I0"><span class="glyphicon glyphicon-play-circle"></span></a></td>
+                            <td><b>{{ repertory.title }}</b></td>
+                            <td>{{ repertory.composer }}</td>
+                            <td>{{ repertory.lyrics }}</td>
+                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="{{ repertory.listen_site }}"><span class="glyphicon glyphicon-play-circle"></span></a></td>
                         </tr>
-                        <tr>
-                            <td><b>&Uuml;ks kantrilaul</b></td>
-                            <td>Peeter Perens</td>
-                            <td>Laur Lomper</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/c6kiFLrr1es"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>N&auml;&auml;risokk</b></td>
-                            <td>Gustav Ernesaks</td>
-                            <td>Mart Raud</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/RQNtpZ-XbmE"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Ma laulan suust ja s&uuml;damest</b></td>
-                            <td>P&auml;rt Uusberg</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/7lyRY1AbdGM"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Jeletski aaria ooperist "Padaemand"</b></td>
-                            <td>Pjotr Tšaikovski</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/QuM-J6h4mcM"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>&Uuml;ks hetk</b></td>
-                            <td>Ester M&auml;gi</td>
-                            <td>Vladimir Beekman</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/p8ZGSqMHYxs"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Nad vaatavad &uuml;ksteise otsa</b></td>
-                            <td>P&auml;rt Uusberg</td>
-                            <td>Ernst Enno</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/533GMbp45EI"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Ilus t&uuml;druk tantsib sambat</b></td>
-                            <td>Peeter Thomson, seade Siim Selis</td>
-                            <td>Helmuth K&otilde;iv</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/6FBovG1f7FI"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Pilvedele</b></td>
-                            <td>Aleksander L&auml;te</td>
-                            <td>Karl Eduard S&ouml;&ouml;t</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/ovAayQG4vTw"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Joy To The World</b></td>
-                            <td>Lowell Mason, seade Robert Sund</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/C8HW3UwrLRw"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Taas talv on tulnud</b></td>
-                            <td>Piret Rips</td>
-                            <td>Leelo Tungal</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/hNexCK0LNRg"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Composition for Chorus 6:2</b></td>
-                            <td>Michio Mamiya</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/buVv3Prts24"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Taevast, kui sa &otilde;ue l&auml;hed</b></td>
-                            <td>Tauno Aints</td>
-                            <td>Jaan Kross</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/FqyF8Smzxgk"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>H&auml;&auml;led Tammsaare karjap&otilde;lvest</b></td>
-                            <td>Veljo Tormis</td>
-                            <td>rahvaluule</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/YcBSSIjEYBs"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Must naine</b></td>
-                            <td>Veljo Tormis</td>
-                            <td>Eesti rahvalaul</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/H6evQGi2nY8"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Oh Kristus, valgus oled sa</b></td>
-                            <td>rahvalik koraaliviis, seade Gunnar Idenstam</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/iH-jevtvur0"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>P&uuml;ha &ouml;&ouml;</b></td>
-                            <td>Franz Gruber</td>
-                            <td>Joseph Mohr, t&otilde;lge Karl August Hermann</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/xGYesWiq_mI"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Talve&ouml;&ouml;</b></td>
-                            <td>Agu Tammeorg</td>
-                            <td>Ott Arder</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/r8OZD94LTvc"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Oh laulgem s&uuml;damest</b></td>
-                            <td>Piret Rips</td>
-                            <td>Johann Hornung</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/gBBW3hzWi6Y"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Oh sa &otilde;nnistav</b></td>
-                            <td>Sitsiilia rahvaviis</td>
-                            <td>Johann Daniel Falk, tõlge Johann Voldemar Jannsen</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/AUxwgwMZcFU"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>O Magnum Mysterium</b></td>
-                            <td>Morten Lauridsen</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/ZrQqXRU-xw8"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>See oli sel kallil j&otilde;ulu'aal</b></td>
-                            <td>Piret Rips</td>
-                            <td>Anna Haava</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/_z87mBm0Lsc"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>&Uuml;ts lats om s&uuml;ndn&uuml;</b></td>
-                            <td>Eesti rahvap&auml;rane koraaliviis, seadnud Piret Rips-Laul</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/2QO-jWjUixQ"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Kuningate laul</b></td>
-                            <td>Piret Rips</td>
-                            <td>Leelo Tungal</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Rm3r-FaO-40"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Sweet Home Alabama</b></td>
-                            <td>Ed King, Gary Rossington, Ronnie Van Zant</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/i2Fu8U5aAjk"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Ave Maria</b></td>
-                            <td>Eduard Tubin</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/DKiAvmqLAu0"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>De Profundis</b></td>
-                            <td>Arvo P&auml;rt</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/nMP6s8Acfd8"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Let it Snow</b></td>
-                            <td>Jule Styne/Sammy Cahn, seade Hain H&otilde;lpus</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/cy_0jFhfImw"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>&Uuml;ks suu</b></td>
-                            <td>Peep Sarapik</td>
-                            <td>Juhan Liiv</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/CvLAgnbD_Jg"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>We Wish You a Merry Christmas</b></td>
-                            <td>Inglise j&otilde;ululaul, seade Jukka Linkola</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/sy4H7kPdGtI"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>White Christmas</b></td>
-                            <td>Irving Berlin</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/rGazVftkxTc"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Saltarelle</b></td>
-                            <td>Camille Saint-Sa&euml;ns</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/B9fGhuTf_FQ"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>The Seeds Of Love</b></td>
-                            <td>Ralph Vaughan Williams</td>
-                            <td></td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/G2bxUrDaRtE"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>S&otilde;meralt s&otilde;rmikule</b></td>
-                            <td>Eduard Tubin</td>
-                            <td>rahvaluule</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Jp-OmJ0fnWg"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Tasase maa laul</b></td>
-                            <td>Veljo Tormis</td>
-                            <td>Paul-Eerik Rummo</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/VtBbImBNGkA"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
-                        <tr>
-                            <td><b>Hakkame mehed minema</b></td>
-                            <td>Gustav Ernesaks</td>
-                            <td>rahvaluule</td>
-                            <td><a href="#" class="watch-link" data-toggle="modal" data-frame="iframe" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/TZ2jHSlGwxk"><span class="glyphicon glyphicon-play-circle"></span></a></td>
-                        </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 </div>
+
 <div class="container">
     <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
