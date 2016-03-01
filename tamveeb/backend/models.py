@@ -170,9 +170,7 @@ class AdditionalPage(models.Model):
     image = models.ImageField('Pilt', upload_to=random_additional_page_image_path)
     title = models.CharField('Pealkiri', max_length=255)
     content = models.TextField('Sisu')
-
-    def clean(self):
-        validate_only_one_instance(self)
+    visible = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

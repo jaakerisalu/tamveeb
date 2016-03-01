@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    {% for block in text_blocks %}
+    {% for block in about_us_text_blocks %}
         {% if not forloop.last %}
             {% if block.alignment == 'right' %}
                 <div class="container">
@@ -76,7 +76,7 @@
         </div>
     </div>
 
-    {% with text_blocks|last as last_block %}
+    {% with about_us_text_blocks|last as last_block %}
         {% if block.alignment == 'right' %}
                 <div class="container">
                     <div id="featurette" class="row featurette">

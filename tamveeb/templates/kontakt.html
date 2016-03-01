@@ -13,7 +13,7 @@
         </div>
     </div>
 
-    {% for block in text_blocks %}
+    {% for block in contact_text_blocks %}
         {% if not forloop.last %}
             {% if block.alignment == 'right' %}
                 <div class="container">
@@ -46,18 +46,18 @@
     {% endfor %}
 
     {% for contact in contact_us %}
-    <div class="container">
-        <div id="featurette" class="row featurette">
-            <div id="featuretteText" class="col-md-9">
-                <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">V&otilde;ta meiega &uuml;hendust</h2>
-                <h3>{{ contact.choir }}</h3><p>Aadress: {{ contact.address }}<br>Telefon: {{ contact.phone }}<br>E-post: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> (lepingud, arved jms)<br>Koduleht: <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>Aadress: {{ contact.organization_address }}<br>Registri nr: {{ contact.registry_number }}<br>KM kohuslase nr: {{ contact.vat }}</p>
+        <div class="container">
+            <div id="featurette" class="row featurette">
+                <div id="featuretteText" class="col-md-9">
+                    <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">V&otilde;ta meiega &uuml;hendust</h2>
+                    <h3>{{ contact.choir }}</h3><p>Aadress: {{ contact.address }}<br>Telefon: {{ contact.phone }}<br>E-post: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> (lepingud, arved jms)<br>Koduleht: <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>Aadress: {{ contact.organization_address }}<br>Registri nr: {{ contact.registry_number }}<br>KM kohuslase nr: {{ contact.vat }}</p>
+                </div>
             </div>
         </div>
-    </div>
     {% endfor %}
 
     <div class="container-fluid" style="background-color: #f6f6f6">
-        {% with text_blocks|last as last_block %}
+        {% with contact_text_blocks|last as last_block %}
         {% if block.alignment == 'right' %}
                 <div class="container">
                     <div id="featurette" class="row featurette">

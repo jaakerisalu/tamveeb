@@ -80,12 +80,10 @@
                                 </ul>
                             </li>
 
-                            {% if additional_page.count > 0 %}
-                              {%  for addition in additional_page %}
-                            <li class="dropdown">
-                                <a href="{% url 'lisaleht' %}" role="button" aria-haspopup="true" aria-expanded="false">{{ addition.title }}</a>
-                            </li>
-                              {% endfor %}
+                            {% if additional_page %}
+                                <li class="dropdown">
+                                    <a href="{% url 'lisaleht' %}" role="button" aria-haspopup="true" aria-expanded="false">{{ additional_page.title }}</a>
+                                </li>
                             {% endif %}
 
                         </ul>

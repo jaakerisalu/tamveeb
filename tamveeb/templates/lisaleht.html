@@ -5,16 +5,14 @@
 {% load staticfiles %}
 
 {% block content %}
-  {%  for addition in additional_page %}
   <div class="container">
     <div id="featurette" class="row featurette">
       <div id="featuretteText" class="col-md-12">
-        <img src="{{ addition.image.url }}" width="100%"/><br/><br/>
-        <h2 id="lisaleht" class="featurette-heading">{{addition.title}}</h2>
-        <p style="text-align: justify; font-size: 21px;">{{addition.content}}</p>
+        <img src="{{ additional_page.image.url }}" width="100%"/><br/><br/>
+        <h2 id="lisaleht" class="featurette-heading">{{additional_page.title}}</h2>
+        <p style="text-align: justify; font-size: 21px;">{{additional_page.content}}</p>
       </div>
     </div>
   </div>
-  {% endfor %}
 {% endblock content %}
 
