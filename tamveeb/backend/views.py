@@ -1,6 +1,6 @@
 import datetime
 from django.views.generic import TemplateView
-from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock, AdditionalPage
+from backend.models import SeasonSponsor, CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock, AdditionalPage
 
 class BaseView(TemplateView):
     template_name = 'base.html'
