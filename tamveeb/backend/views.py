@@ -66,3 +66,15 @@ class ContactView(TemplateView):
         })
 
         return self.render_to_response(context)
+
+class TemplateView(TemplateView):
+    template_name = 'lisaleht.html'
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+
+        context.update({
+            'additional_page': AdditionalPage.objects.all(),
+        })
+
+        return self.render_to_response(context)
