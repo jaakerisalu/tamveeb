@@ -1,6 +1,6 @@
 import datetime
 from django.views.generic import TemplateView
-from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactTextBlock
+from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock
 
 class LandingView(TemplateView):
     template_name = 'home.html'
@@ -49,6 +49,7 @@ class ContactView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         context.update({
+            'contact_us': ContactUs.objects.all(),
             'text_blocks': list(ContactTextBlock.objects.all()),
         })
 

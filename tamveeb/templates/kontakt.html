@@ -45,14 +45,16 @@
         {% endif %}
     {% endfor %}
 
+    {% for contact in contact_us %}
     <div class="container">
         <div id="featurette" class="row featurette">
             <div id="featuretteText" class="col-md-9">
                 <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">V&otilde;ta meiega &uuml;hendust</h2>
-                <h3>Tehnikaülikooli Akadeemiline Meeskoor</h3><p>Aadress: Ehitajate tee 5, 19086 Tallinn<br>Telefon: +372 50 79 079<br>E-post: <a href="mailto:meeskoor@ttu.ee">meeskoor@ttu.ee</a>, <a href="mailto:meeskoor.finants@ttu.ee">meeskoor.finants@ttu.ee</a> (lepingud, arved jms)<br>Koduleht: <a href="http://www.meeskoor.ee/">http://www.meeskoor.ee/</a></p><h3>MTÜ Tallinna Tehnikaülikooli Akadeemiline Meeskoor</h3><p>Aadress: Ehitajate tee 5, 19086 Tallinn<br>Registri nr: 80106706<br>KM kohuslase nr: EE100606964</p>
+                <h3>{{ contact.choir }}</h3><p>Aadress: {{ contact.address }}<br>Telefon: {{ contact.phone }}<br>E-post: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> (lepingud, arved jms)<br>Koduleht: <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>Aadress: {{ contact.organization_address }}<br>Registri nr: {{ contact.registry_number }}<br>KM kohuslase nr: {{ contact.vat }}</p>
             </div>
         </div>
     </div>
+    {% endfor %}
 
     <div class="container-fluid" style="background-color: #f6f6f6">
         {% with text_blocks|last as last_block %}

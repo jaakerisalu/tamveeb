@@ -1,6 +1,8 @@
 from functools import wraps
 import os
 import uuid
+
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.decorators import available_attrs
 
@@ -20,6 +22,12 @@ def path_prefix(prefix):
             return os.path.join(prefix, func(*args, **kwargs))
         return _wrapped_func
     return decorator
+
+def validate_only_one_instance(obj):
+    model = obj.__class__
+    if (model.objects.count() > 0 and
+            obj.id != model.objects.get().id):
+        raise ValidationError("Objektist %s saab teha ainult ühe eksemplari!" % model.__name__)
 
 @path_prefix('carousel')
 def random_carousel_image_path(instance, filename):
@@ -98,11 +106,30 @@ class AboutUsTextBlock(models.Model):
 class Management(models.Model):
     name = models.CharField('Nimi', max_length=255)
     job = models.CharField('Amet', max_length=255)
-    phone = models.IntegerField('Telefon', blank=True, null=True)
+    phone = models.CharField('Telefon', max_length=255, blank=True, null=True)
     email = models.CharField('E-post', max_length=255)
 
     def __str__(self):
         return self.name
+
+class ContactUs(models.Model):
+    choir = models.CharField('Koor', max_length=255)
+    address = models.CharField('Aadress', max_length=255)
+    phone = models.CharField('Telefon', max_length=255)
+    email = models.CharField('E-post', max_length=255)
+    finance_email = models.CharField('Finants e-post', max_length=255, help_text='Lepingud, arved jms.')
+    homepage = models.URLField('Koduleht')
+
+    organization = models.CharField('Organisatsioon', max_length=255)
+    organization_address = models.CharField('Organisatsiooni aadress', max_length=255)
+    registry_number = models.IntegerField('Registri number')
+    vat = models.CharField('Käibemaksukohuslase number', max_length=255)
+
+    def clean(self):
+        validate_only_one_instance(self)
+
+    def __str__(self):
+        return self.choir
 
 class ContactTextBlock(models.Model):
     LEFT = 'left'
