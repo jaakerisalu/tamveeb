@@ -8,4 +8,5 @@ admin.site.register(AboutUsTextBlock)
 admin.site.register(Management)
 admin.site.register(ContactUs)
 admin.site.register(ContactTextBlock)
+admin.site.register(AdditionalPage)
 
