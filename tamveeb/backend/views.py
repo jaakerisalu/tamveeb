@@ -1,6 +1,7 @@
 import datetime
 from django.views.generic import TemplateView
-from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock
+from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock, AdditionalPage
+
 
 class LandingView(TemplateView):
     template_name = 'home.html'
@@ -51,6 +52,19 @@ class ContactView(TemplateView):
         context.update({
             'contact_us': ContactUs.objects.all(),
             'text_blocks': list(ContactTextBlock.objects.all()),
+        })
+
+        return self.render_to_response(context)
+
+
+class TemplateView(TemplateView):
+    template_name = 'lisaleht.html'
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+
+        context.update({
+            'additional_page': AdditionalPage.objects.all(),
         })
 
         return self.render_to_response(context)

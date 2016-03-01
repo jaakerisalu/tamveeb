@@ -41,6 +41,10 @@ def random_about_us_image_path(instance, filename):
 def random_contact_image_path(instance, filename):
     return random_path(instance, filename)
 
+@path_prefix('additional_page')
+def random_additional_page_image_path(instance, filename):
+    return random_path(instance, filename)
+
 class CarouselSlide(models.Model):
     MUUSIKA = 'muusika'
     MEIST = 'meist'
@@ -148,6 +152,18 @@ class ContactTextBlock(models.Model):
 
     class Meta:
         ordering = ['order', 'title']
+
+    def __str__(self):
+        return self.title
+
+class AdditionalPage(models.Model):
+
+    image = models.ImageField('Pilt', upload_to=random_additional_page_image_path)
+    title = models.CharField('Pealkiri', max_length=255)
+    content = models.TextField('Sisu')
+
+    def clean(self):
+        validate_only_one_instance(self)
 
     def __str__(self):
         return self.title

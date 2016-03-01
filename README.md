@@ -21,7 +21,7 @@ or if you use virtualenvwrapper
 
 **Install dependencies**
 
- `pip install -r requirements/local.txt`
+ `pip install -r requirements/local.txt`\
 
 **Switch to internal tamveeb dir**
 
