@@ -41,6 +41,15 @@ def random_about_us_image_path(instance, filename):
 def random_contact_image_path(instance, filename):
     return random_path(instance, filename)
 
+class SeasonSponsor(models.Model):
+    sponsor = models.CharField('Hooaja sponsor', max_length=255)
+
+    def clean(self):
+        validate_only_one_instance(self)
+
+    def __str__(self):
+        return self.sponsor
+
 class CarouselSlide(models.Model):
     MUUSIKA = 'muusika'
     MEIST = 'meist'

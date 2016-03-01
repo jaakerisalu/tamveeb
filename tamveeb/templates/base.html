@@ -111,6 +111,11 @@
             <div class="col-md-2 col-xs-4 text-center">
                 <a href="http://www.hansabuss.ee/"><img class="img-circle" src="{% static 'images/logo/hansabuss.png' %}" alt="Generic placeholder image" width="70" height="70"></a>
             </div>
+            {% for sponsor in season_sponsor %}
+            <div id="sponsor-row">
+                {{ sponsor.sponsor }}
+            </div>
+            {% endfor %}
         </div>
 
         <footer>

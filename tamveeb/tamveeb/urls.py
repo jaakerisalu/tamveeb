@@ -3,7 +3,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic.base import TemplateView
-from backend.views import MusicView, LandingView, AboutUsView, ContactView
+from backend.views import LandingView, MusicView, AboutUsView, ContactView
 
 admin.autodiscover()
 

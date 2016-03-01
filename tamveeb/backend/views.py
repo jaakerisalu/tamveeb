@@ -1,6 +1,18 @@
 import datetime
 from django.views.generic import TemplateView
-from backend.models import CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock
+from backend.models import SeasonSponsor, CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock
+
+class BaseView(TemplateView):
+    template_name = 'base.html'
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+
+        context.update({
+            'season_sponsor': SeasonSponsor.objects.all(),
+        })
+
+        return self.render_to_response(context)
 
 class LandingView(TemplateView):
     template_name = 'home.html'
