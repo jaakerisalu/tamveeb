@@ -79,9 +79,15 @@
                                     <li><a href="{% url 'kontakt' %}#telliesinemine">Telli esinemine</a></li>
                                 </ul>
                             </li>
+
+                            {% if additional_page.count > 0 %}
+                              {%  for addition in additional_page %}
                             <li class="dropdown">
-                                <a href="{% url 'lisaleht' %}" role="button" aria-haspopup="true" aria-expanded="false">Ballaadid</a>
+                                <a href="{% url 'lisaleht' %}" role="button" aria-haspopup="true" aria-expanded="false">{{ addition.title }}</a>
                             </li>
+                              {% endfor %}
+                            {% endif %}
+
                         </ul>
                     </div>
                 </div>

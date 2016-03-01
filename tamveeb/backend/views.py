@@ -2,17 +2,6 @@ import datetime
 from django.views.generic import TemplateView
 from backend.models import SeasonSponsor, CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock, AdditionalPage
 
-class BaseView(TemplateView):
-    template_name = 'base.html'
-
-    def get(self, request, *args, **kwargs):
-        context = self.get_context_data(**kwargs)
-
-        context.update({
-            'season_sponsor': SeasonSponsor.objects.all(),
-        })
-
-        return self.render_to_response(context)
 
 class LandingView(TemplateView):
     template_name = 'home.html'
@@ -21,8 +10,11 @@ class LandingView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         context.update({
+            'additional_page': AdditionalPage.objects.all(),
             'slides': CarouselSlide.objects.all(),
+             'season_sponsor': SeasonSponsor.objects.all(),
         })
+
 
         return self.render_to_response(context)
 
@@ -35,8 +27,10 @@ class MusicView(TemplateView):
         now = datetime.datetime.now()
 
         context.update({
+            'additional_page': AdditionalPage.objects.all(),
             'concerts': Concert.objects.filter(date__gte=now.date()),
             'repertorys': Repertory.objects.all(),
+            'season_sponsor': SeasonSponsor.objects.all(),
         })
 
         return self.render_to_response(context)
@@ -48,8 +42,10 @@ class AboutUsView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         context.update({
+            'additional_page': AdditionalPage.objects.all(),
             'text_blocks': list(AboutUsTextBlock.objects.all()),  #QuerySet tehakse listiks, et template'is seda kasutada.
             'managements': Management.objects.all(),
+            'season_sponsor': SeasonSponsor.objects.all(),
         })
 
         return self.render_to_response(context)
@@ -61,8 +57,10 @@ class ContactView(TemplateView):
         context = self.get_context_data(**kwargs)
 
         context.update({
+            'additional_page': AdditionalPage.objects.all(),
             'contact_us': ContactUs.objects.all(),
             'text_blocks': list(ContactTextBlock.objects.all()),
+            'season_sponsor': SeasonSponsor.objects.all(),
         })
 
         return self.render_to_response(context)
@@ -75,6 +73,7 @@ class TemplateView(TemplateView):
 
         context.update({
             'additional_page': AdditionalPage.objects.all(),
+            'season_sponsor': SeasonSponsor.objects.all(),
         })
 
         return self.render_to_response(context)
