@@ -1,139 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tehnika&uuml;likooli Akadeemiline Meeskoor">
-  <meta name="author" content="">
-  <link rel="icon" href="favicon.ico">
-  <title>Tehnika&uuml;likooli Akadeemiline Meeskoor</title>
-  <meta name="description" content="Tehnika&uuml;likooli Akadeemiline Meeskoor">
-  <meta property="og:description" content="Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht">
-  <meta name="keywords" content="Choir, music, singing">
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Tehnika&uuml;likooli Akadeemiline Meeskoor" />
-  <meta property="og:image" content="logo/tam.png" />
-  <meta property="og:title" content="Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht" />
-  <meta property="og:url" content="http://www.meeskoor.ee/lisaleht" />
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div class="navbar-wrapper">
-    <div class="container">
-      <nav id="navigationBar" class="navbar navbar-inverse navbar-static-top">
-        <div id="navigationBarDiv" class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div>
-              <a href="index.html">
-                <div id="imageDiv">
-                  <img src="logo/tam.png" height="50em" width="50em" alt="TAM">
-                </div>
-                <div id="titleDiv">
-                  <div id="title" class="navbar-brand">Tehnika&uuml;likooli Akadeemiline Meeskoor</div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="dropdown">
-                <a href="muusika.html" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Muusika <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="muusika.html#kontserdid">Kontserdid</a></li>
-                  <!--<li><a href="muusika.html#salvestised">Salvestised</a></li>-->
-                  <li><a href="muusika.html#repertuaar">Repertuaar</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="meist.html" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meist <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="meist.html#pohivaartused">P&otilde;hiv&auml;&auml;rtused</a></li>
-                  <li><a href="meist.html#traditsioonid">Traditsioonid</a></li>
-                  <li><a href="meist.html#dirigendid">Dirigendid</a></li>
-                  <li><a href="meist.html#juhatus">Juhatus</a></li>
-                  <li><a href="meist.html#ajalugu">Ajalugu</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="kontakt.html" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kontakt <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="kontakt.html#votauhendust">V&otilde;ta meiega &uuml;hendust</a></li>
-                  <li><a href="kontakt.html#telliesinemine">Telli esinemine</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Ballaadid</span></a>
-              </li>
-            </ul>
-						<div id="languageDiv">
-							<p id="languageParagraph">
-								<a id="language" href="lisaleht_eng.html">ENG</a>
-							</p>
-						</div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
+{% extends "base.html" %}
+{% block og_url %}http://www.meeskoor.ee/lisaleht/{% endblock %}
+{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht{% endblock %}
+{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht{% endblock %}
+{% load staticfiles %}
+
+{% block content %}
+  {%  for addition in additional_page %}
   <div class="container">
     <div id="featurette" class="row featurette">
       <div id="featuretteText" class="col-md-12">
-        <img src="img/ballaadid.png" width="100%"/><br/><br/>
-        <h2 id="lisaleht" class="featurette-heading">Ballaadid</h2>
-        <p style="text-align: justify; font-size: 21px;">Tehnika&uuml;likooli Akadeemiline Meeskoor<br/>Ain Anger (bass)<br/>Klaveril Siim Selis<br/><br/>Dirigendid Peeter Perens ja Siim Selis<br/><br/>Kavas:<br/>Thompson, Saint-Sa&euml;ns, Loewe, Britten, Wagner, Tormis, Tubin, V. Kapp.<br/>Tauno Aints. Uus teos (esiettekanne)<br/><br/>Tehnika&uuml;likooli Akadeemilise Meeskoori jaoks on saabunud eriline hooaeg – tegu on koori juubeliaastaga. Detsembris t&auml;histab koor 70. s&uuml;nnip&auml;eva ning see t&auml;hendab pingelist kontserttegevust.<br/><br/>Tallinna kontserdiks saabub kodumaale bass Ain Anger, et esitada koos kooriga juubelikava, mis m&otilde;ned p&auml;evad varem on k&otilde;lanud Londonis (St James´s Church Piccadilly) ja Llanellis (Ffwrnes Theatre).<br/><br/>Ain Anger on maailmanimega Eesti bass. Teda hinnatakse ennek&otilde;ike kui suurep&auml;rast Wagneri-esitajat. Anger on esinenud New Yorgi, Clevelandi, Saint Louisi, Stockholmi ja Tokyo s&uuml;mfooniaorkestriga ning teinud koost&ouml;&ouml;d tuntud dirigentidega, nagu Lorin Maazel, Christian Thielemann, Seiji Ozawa, Zubin Mehta, Riccardo Muti, Esa-Pekka Salonen ja Franz Welser-M&ouml;st.</p>
+        <img src="{{ addition.image.url }}" width="100%"/><br/><br/>
+        <h2 id="lisaleht" class="featurette-heading">{{addition.title}}</h2>
+        <p style="text-align: justify; font-size: 21px;">{{addition.content}}</p>
       </div>
     </div>
   </div>
-  <div class="container">
-    <div id="sponsor-block" class="row">
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.storaenso.com/"><img class="img-circle" src="logo/storaenso.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.kaubamaja.ee/"><img class="img-circle" src="logo/kaubamaja.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.kuku.ee/"><img class="img-circle" src="logo/kuku.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.saku.ee/"><img class="img-circle" src="logo/saku.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.ttu.ee/"><img class="img-circle" src="logo/ttu.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-      <div class="col-md-2 col-xs-4 text-center">
-        <a href="http://www.hansabuss.ee/"><img class="img-circle" src="logo/hansabuss.png" alt="Generic placeholder image" width="70" height="70"></a>
-      </div>
-    </div>
-    <footer>
-      <p class="pull-right"><a id="logIn" href="http://www.tam.ee/siseinfo/">Logi sisse</a></p>
-      <p>
-        &copy;
-        <script language="JavaScript" type="text/javascript">
-        now = new Date
-        theYear=now.getYear()
-        if (theYear < 1900)
-        theYear=theYear+1900
-        document.write(theYear)
-        </script>
-        Tehnika&uuml;likooli Akadeemiline Meeskoor
-      </p>
-    </footer>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  <script src="js/bootstrap-hover-dropdown.min.js"></script>
-</body>
-</html>
+  {% endfor %}
+{% endblock content %}
+
