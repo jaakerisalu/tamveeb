@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'compressor',
+    'modeltranslation',
 
     'accounts',
     'tamveeb',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,11 +96,13 @@ CACHES = {
 
 
 # Internationalization
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'et'
+gettext = lambda s: s
 LANGUAGES = (
-    ('en', 'English'),
-    ('et', 'Eesti keel'),
+    ('et', gettext('Eesti keel')),
+    ('en', gettext('English')),
 )
+
 LOCALE_PATHS = (
     'locale',
 )

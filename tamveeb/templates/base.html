@@ -1,5 +1,10 @@
 {% load staticfiles %}
 {% load compress %}
+{% load i18n %}
+
+{% get_available_languages as languages %}
+{% get_current_language as LANGUAGE_CODE %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +52,7 @@
                                     <img src="{% static 'images/logo/tam.png' %}" height="50em" width="50em" alt="TAM">
                                 </div>
                                 <div id="titleDiv">
-                                    <div id="title" class="navbar-brand">Tehnika&uuml;likooli Akadeemiline Meeskoor</div>
+                                    <div id="title" class="navbar-brand">{% trans 'Tehnikaülikooli Akadeemiline Meeskoor' %}</div>
                                 </div>
                             </a>
                         </div>
@@ -90,6 +95,17 @@
                     </div>
                 </div>
             </nav>
+            <div class="language">
+                {% if LANGUAGE_CODE == 'et' %}
+                    {% language 'en' %}
+                        <a href="{% url 'home' %}">ENG</a>
+                    {% endlanguage %}
+                {% else %}
+                    {% language 'et' %}
+                        <a href="{% url 'home' %}">EST</a>
+                    {% endlanguage %}
+                {% endif %}
+            </div>
         </div>
     </div>
 

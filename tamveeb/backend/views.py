@@ -1,4 +1,5 @@
 import datetime
+from django.utils.translation import activate, get_language
 from django.views.generic import TemplateView
 from backend.models import SeasonSponsor, CarouselSlide, Concert, Repertory, AboutUsTextBlock, Management, ContactUs, ContactTextBlock, AdditionalPage
 
@@ -24,6 +25,8 @@ class LandingView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         context = merge_navbar_context(self.get_context_data(**kwargs))
+        print(get_language())
+        print(CarouselSlide.objects.last().title)
 
         context.update({
             'slides': CarouselSlide.objects.all(),

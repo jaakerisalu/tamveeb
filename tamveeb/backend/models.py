@@ -166,7 +166,6 @@ class ContactTextBlock(models.Model):
         return self.title
 
 class AdditionalPage(models.Model):
-
     image = models.ImageField('Pilt', upload_to=random_additional_page_image_path)
     title = models.CharField('Pealkiri', max_length=255)
     content = models.TextField('Sisu')
