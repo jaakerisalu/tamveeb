@@ -142,7 +142,7 @@ SECRET_KEY = 'dummy key'
 
 AUTH_USER_MODEL = 'accounts.User'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["185.7.254.130"]
 
 # Static site url, used when we need absolute url but lack request object, e.g. in email sending.
 SITE_URL = 'http://127.0.0.1:8000'

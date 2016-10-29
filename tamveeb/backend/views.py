@@ -26,7 +26,6 @@ class LandingView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = merge_navbar_context(self.get_context_data(**kwargs))
         print(get_language())
-        print(CarouselSlide.objects.last().title)
 
         context.update({
             'slides': CarouselSlide.objects.all(),

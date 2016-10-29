@@ -62,3 +62,8 @@ To install existing dependencies, run `bower install` in the inner project dir (
 To add a dependency, run `bower install <package-name> --save`.
 Deploying with Fabric will ensure that all Bower dependencies are also installed in the server.
 If you don't have Bower installed, you can get it by running `npm install -g bower`.
+
+
+## Run with uWSGI
+
+ `uwsgi --socket :8001 --module tamveeb.wsgi
