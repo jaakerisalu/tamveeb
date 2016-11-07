@@ -1,10 +1,10 @@
 from settings.staging import *
 
 
-ALLOWED_HOSTS = ['185.7.254.130']
+ALLOWED_HOSTS = ['185.7.254.130', 'meeskoor.ee', 'www.meeskoor.ee']
 
 # Static site url, used when we need absolute url but lack request object, e.g. in email sending.
-SITE_URL = 'vps50913.vps.co.ee'
+SITE_URL = 'http://meeskoor.ee/'
 
 EMAIL_HOST_PASSWORD = 'TODO (api key)'
 
