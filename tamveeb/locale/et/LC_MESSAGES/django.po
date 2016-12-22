@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-14 15:54+0000\n"
+"POT-Creation-Date: 2016-12-22 15:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,313 @@ msgstr ""
 msgid "Important dates"
 msgstr ""
 
-#: templates/base.html:52
+#: settings/base.py:102
+msgid "Eesti keel"
+msgstr ""
+
+#: settings/base.py:103
+msgid "English"
+msgstr ""
+
+#: templates/502.html:27
+msgid "Whoops"
+msgstr ""
+
+#: templates/502.html:29
+msgid "We're updating our servers. Please check back soon."
+msgstr ""
+
+#: templates/accounts/login.html:10
+msgid "Unustasid parooli?"
+msgstr ""
+
+#: templates/base.html:12 templates/base.html.py:14 templates/base.html:18
+#: templates/base.html.py:20 templates/base.html:151
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor"
+msgstr ""
+
+#: templates/base.html:15
+msgid "Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht"
+msgstr ""
+
+#: templates/base.html:16
+msgid "Koor, muusika, laulmine"
+msgstr ""
+
+#: templates/base.html:44
+msgid "Toggle navigation"
+msgstr ""
+
+#: templates/base.html:55
 msgid "Tehnikaülikooli Akadeemiline Meeskoor"
+msgstr ""
+
+#: templates/base.html:63 templates/home.html:54 templates/muusika.html:12
+msgid "Muusika"
+msgstr ""
+
+#: templates/base.html:65
+msgid "Kontserdid"
+msgstr ""
+
+#: templates/base.html:66
+msgid "Salvestised"
+msgstr ""
+
+#: templates/base.html:67 templates/muusika.html:59
+msgid "Repertuaar"
+msgstr ""
+
+#: templates/base.html:71 templates/home.html:63 templates/meist.html:13
+msgid "Meist"
+msgstr ""
+
+#: templates/base.html:73
+msgid "P&otilde;hiv&auml;&auml;rtused"
+msgstr ""
+
+#: templates/base.html:74
+msgid "Traditsioonid"
+msgstr ""
+
+#: templates/base.html:75
+msgid "Dirigendid"
+msgstr ""
+
+#: templates/base.html:76 templates/meist.html:54
+msgid "Juhatus"
+msgstr ""
+
+#: templates/base.html:77
+msgid "Ajalugu"
+msgstr ""
+
+#: templates/base.html:81 templates/home.html:72 templates/kontakt.html:12
+msgid "Kontakt"
+msgstr ""
+
+#: templates/base.html:83 templates/kontakt.html:53
+msgid "V&otilde;ta meiega &uuml;hendust"
+msgstr ""
+
+#: templates/base.html:84
+msgid "Telli esinemine"
+msgstr ""
+
+#: templates/base.html:141
+msgid "Logi sisse"
+msgstr ""
+
+#: templates/emails/password_reset.html:6
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at tamveeb."
+msgstr ""
+
+#: templates/emails/password_reset.html:9
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/home.html:28
+msgid "Eelmine"
+msgstr ""
+
+#: templates/home.html:32
+msgid "Järgmine"
+msgstr ""
+
+#: templates/home.html:55 templates/muusika.html:13
+msgid ""
+"Koor on osalenud paljudel koorikonkurssidel ja paistab silma mitmek&uuml;"
+"lgse tegevusega nii muusika alal kui ka seltsielus."
+msgstr ""
+
+#: templates/home.html:55 templates/home.html.py:64 templates/home.html:73
+msgid "Loe edasi..."
+msgstr ""
+
+#: templates/home.html:64 templates/meist.html:14
+msgid ""
+"Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis "
+"tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures."
+msgstr ""
+
+#: templates/home.html:73 templates/kontakt.html:13
+msgid ""
+"Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama "
+"ka kitsamas ringis."
+msgstr ""
+
+#: templates/kontakt.html:4 templates/kontakt.html.py:5
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "Aadress:"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "Telefon:"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "E-post:"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "(lepingud, arved jms)"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "Koduleht:"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "Registri nr:"
+msgstr ""
+
+#: templates/kontakt.html:54
+msgid "KM kohuslase nr:"
+msgstr ""
+
+#: templates/lisaleht.html:4 templates/lisaleht.html.py:5
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht"
+msgstr ""
+
+#: templates/meist.html:4 templates/meist.html.py:5
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist"
+msgstr ""
+
+#: templates/meist.html:61
+msgid "Nimi"
+msgstr ""
+
+#: templates/meist.html:62
+msgid "Amet"
+msgstr ""
+
+#: templates/meist.html:63
+msgid "Telefon"
+msgstr ""
+
+#: templates/meist.html:64
+msgid "E-post"
+msgstr ""
+
+#: templates/muusika.html:4 templates/muusika.html.py:5
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Muusika"
+msgstr ""
+
+#: templates/muusika.html:28
+msgid "Kuup&auml;ev"
+msgstr ""
+
+#: templates/muusika.html:29
+msgid "Kellaaeg"
+msgstr ""
+
+#: templates/muusika.html:30
+msgid "Kontsert"
+msgstr ""
+
+#: templates/muusika.html:31
+msgid "Asukoht"
+msgstr ""
+
+#: templates/muusika.html:32
+msgid "Osta"
+msgstr ""
+
+#: templates/muusika.html:65
+msgid "Pealkiri"
+msgstr ""
+
+#: templates/muusika.html:66
+msgid "Helilooja (seadja)"
+msgstr ""
+
+#: templates/muusika.html:67
+msgid "S&otilde;nade autor"
+msgstr ""
+
+#: templates/muusika.html:68
+msgid "Kuula"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:11
+msgid "Your password has been set."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:14
+msgid "You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:19
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:10
+msgid "Password reset confirmation"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:13
+msgid "Please choose a new password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:19
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:22
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:23
+msgid "new password reset"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:8
+msgid "Password reset successful"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:11
+msgid ""
+"We've emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+
+#: templates/registration/password_reset_done.html:14
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:8
+msgid "Reset password"
+msgstr ""
+
+#: templates/topelttuur.html:4 templates/topelttuur.html.py:5
+msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Topelttuur"
+msgstr ""
+
+#: templates/topelttuur.html:13
+msgid "Algab \"Topelttuur\""
+msgstr ""
+
+#: templates/topelttuur.html:14
+msgid ""
+"Juba 70 aastat on Tehnika&uuml;likooli Akadeemiline Meeskoor h&auml;id "
+"kontserdielamusi pakkunud. Alanud s&uuml;gisel s&otilde;idab koor m&ouml;"
+"&ouml;da Eestimaa erinevaid linnasid ja ootab k&otilde;iki oma s&otilde;pru "
+"hubastest kontsertidest osa saama.<br/><br/>Meeskoori "
+msgstr ""
+
+#: templates/topelttuur.html:14
+msgid "vaata lähemalt"
 msgstr ""

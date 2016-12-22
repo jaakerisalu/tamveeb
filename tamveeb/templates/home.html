@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load staticfiles %}
 
 {% block content %}
@@ -24,11 +25,11 @@
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">{% trans "Eelmine" %}</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">{% trans "Järgmine" %}</span>
     </a>
   </div>
 
@@ -45,22 +46,22 @@
       </div>
     </div>
   </div>
-	
+
   <div class="container-fluid" style="background-color: #f6f6f6">
     <div class="container">
 		  <div id="featurette" class="row featurette">
         <div class="col-md-9 featurette-landing">
-          <h2 class="featurette-heading" style="margin-top: 1em">Muusika</h2>
-          <p class="lead">Koor on osalenud paljudel koorikonkurssidel ja paistab silma mitmek&uuml;lgse tegevusega nii muusika alal kui ka seltsielus. <a href="{% url 'muusika' %}">Loe edasi...</a></p>
+          <h2 class="featurette-heading" style="margin-top: 1em">{% trans "Muusika" %}</h2>
+          <p class="lead">{% trans "Koor on osalenud paljudel koorikonkurssidel ja paistab silma mitmek&uuml;lgse tegevusega nii muusika alal kui ka seltsielus." %} <a href="{% url 'muusika' %}">{% trans "Loe edasi..." %}</a></p>
         </div>
         <div class="col-md-3">
           <img id="featuretteImageRight" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="{% static 'images/muusika.png' %}">
         </div>
 			</div>
-      <div id="featurette" class="row featurette">         
+      <div id="featurette" class="row featurette">
   			<div class="col-md-9 col-md-push-3 featurette-landing">
-          <h2 class="featurette-heading" style="margin-top: 1em">Meist</h2>
-          <p class="lead">Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures. <a href="{% url 'meist' %}">Loe edasi...</a></p>
+          <h2 class="featurette-heading" style="margin-top: 1em">{% trans "Meist" %}</h2>
+          <p class="lead">{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures." %} <a href="{% url 'meist' %}">{% trans "Loe edasi..." %}</a></p>
         </div>
         <div class="col-md-3 col-md-pull-9">
           <img id="featuretteImageLeft" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="{% static 'images/meist.png' %}">
@@ -68,8 +69,8 @@
       </div>
 		  <div id="featurette" class="row featurette">
 		  	<div class="col-md-9 featurette-landing">
-					<h2 class="featurette-heading" style="margin-top: 1em">Kontakt</h2>
-					<p class="lead">Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama ka kitsamas ringis. <a href="{% url 'kontakt' %}">Loe edasi...</a></p>
+					<h2 class="featurette-heading" style="margin-top: 1em">{% trans "Kontakt" %}</h2>
+					<p class="lead">{% trans "Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama ka kitsamas ringis." %} <a href="{% url 'kontakt' %}">{% trans "Loe edasi..." %}</a></p>
 				</div>
 				<div class="col-md-3">
 					<img id="featuretteImageRight" class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="{% static 'images/kontakt.png' %}">

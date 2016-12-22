@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block og_url %}http://www.meeskoor.ee/meist/{% endblock %}
-{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist{% endblock %}
-{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist{% endblock %}
+{% block og_title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist" %}{% endblock %}
+{% block title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist" %}{% endblock %}
 {% load staticfiles %}
 
 {% block content %}
@@ -9,8 +10,8 @@
     <div class="container-fluid">
         <div id="jumbotron" class="jumbotron" style="background-image: url({% static 'images/navbar/meist.jpg' %}); background-repeat: no-repeat; background-position: center;">
             <div style="padding-left: 4em; padding-right: 4em;">
-                <h1><span class="header-text">Meist</span></h1>
-                <p><span class="header-text">Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures.</span></p>
+                <h1><span class="header-text">{% trans "Meist" %}</span></h1>
+                <p><span class="header-text">{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures." %}</span></p>
             </div>
         </div>
     </div>
@@ -50,17 +51,17 @@
     <div class="container">
         <div id="featurette" class="row featurette">
             <div id="featuretteText" class="col-md-9">
-                <h2 id="juhatus" class="featurette-heading" style="margin-top: -1px;">Juhatus</h2>
+                <h2 id="juhatus" class="featurette-heading" style="margin-top: -1px;">{% trans "Juhatus" %}</h2>
                 <p class="lead"></p>
             </div>
             <div id="featuretteTable" class="col-md-12  table-responsive">
                 <table class="table table-striped">
                     <tbody>
                     <tr>
-                        <th>Nimi</th>
-                        <th>Amet</th>
-                        <th>Telefon</th>
-                        <th>E-post</th>
+                        <th>{% trans "Nimi" %}</th>
+                        <th>{% trans "Amet" %}</th>
+                        <th>{% trans "Telefon" %}</th>
+                        <th>{% trans "E-post" %}</th>
                     </tr>
                     {% for management in managements %}
                     <tr>

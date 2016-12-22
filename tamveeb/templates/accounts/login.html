@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% load crispy_forms_tags %}
 
@@ -6,5 +7,5 @@
 {% block content %}
     {% crispy form %}
 
-    <a href="{% url 'password_reset' %}">Forgot your password?</a>
+    <a href="{% url 'password_reset' %}">{% trans "Unustasid parooli?" %}</a>
 {% endblock %}

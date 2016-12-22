@@ -9,15 +9,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor{% endblock title %}</title>
+  <title>{% block title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor" %}{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tehnika&uuml;likooli Akadeemiline Meeskoor">
-  <meta property="og:description" content="Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht">
-  <meta name="keywords" content="Choir, music, singing">
+  <meta name="description" content="{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor" %}">
+  <meta property="og:description" content="{% trans "Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht" %}">
+  <meta name="keywords" content="{% trans "Koor, muusika, laulmine" %}">
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Tehnika&uuml;likooli Akadeemiline Meeskoor" />
+  <meta property="og:site_name" content="{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor" %}" />
   <meta property="og:image" content="logo/tam.png" />
-  <meta property="og:title" content="{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor{% endblock %}" />
+  <meta property="og:title" content="{% block og_title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor" %}{% endblock %}" />
   <meta property="og:url" content="{% block og_url %}http://www.meeskoor.ee/{% endblock %}" />
   <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
 
@@ -41,7 +41,7 @@
         <div id="navigationBarDiv" class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
+              <span class="sr-only">{% trans "Toggle navigation" %}</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -60,28 +60,28 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="{% url 'muusika' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Muusika <span class="caret"></span></a>
+                  <a href="{% url 'muusika' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Muusika" %} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-										<li><a href="{% url 'muusika' %}#kontserdid">Kontserdid</a></li>
-										<!--<li><a href="muusika.html#salvestised">Salvestised</a></li>-->
-										<li><a href="{% url 'muusika' %}#repertuaar">Repertuaar</a></li>
+										<li><a href="{% url 'muusika' %}#kontserdid">{% trans "Kontserdid" %}</a></li>
+										<!--<li><a href="muusika.html#salvestised">{% trans "Salvestised" %}</a></li>-->
+										<li><a href="{% url 'muusika' %}#repertuaar">{% trans "Repertuaar" %}</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <a href="{% url 'meist' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Meist <span class="caret"></span></a>
+                  <a href="{% url 'meist' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Meist" %} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="{% url 'meist' %}#pohivaartused">P&otilde;hiv&auml;&auml;rtused</a></li>
-                      <li><a href="{% url 'meist' %}#traditsioonid">Traditsioonid</a></li>
-                      <li><a href="{% url 'meist' %}#dirigendid">Dirigendid</a></li>
-                      <li><a href="{% url 'meist' %}#juhatus">Juhatus</a></li>
-                      <li><a href="{% url 'meist' %}#ajalugu">Ajalugu</a></li>
+                      <li><a href="{% url 'meist' %}#pohivaartused">{% trans "P&otilde;hiv&auml;&auml;rtused" %}</a></li>
+                      <li><a href="{% url 'meist' %}#traditsioonid">{% trans "Traditsioonid" %}</a></li>
+                      <li><a href="{% url 'meist' %}#dirigendid">{% trans "Dirigendid" %}</a></li>
+                      <li><a href="{% url 'meist' %}#juhatus">{% trans "Juhatus" %}</a></li>
+                      <li><a href="{% url 'meist' %}#ajalugu">{% trans "Ajalugu" %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                  <a href="{% url 'kontakt' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kontakt <span class="caret"></span></a>
+                  <a href="{% url 'kontakt' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Kontakt" %} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="{% url 'kontakt' %}#votauhendust">V&otilde;ta meiega &uuml;hendust</a></li>
-                    <li><a href="{% url 'kontakt' %}#telliesinemine">Telli esinemine</a></li>
+                    <li><a href="{% url 'kontakt' %}#votauhendust">{% trans "V&otilde;ta meiega &uuml;hendust" %}</a></li>
+                    <li><a href="{% url 'kontakt' %}#telliesinemine">{% trans "Telli esinemine" %}</a></li>
                   </ul>
                 </li>
 
@@ -94,7 +94,7 @@
             </div>
           </div>
         </nav>
-        <!--<div class="language">
+        <div class="language">
           {% if LANGUAGE_CODE == 'et' %}
             {% language 'en' %}
 							<a href="{% url 'home' %}">ENG</a>
@@ -104,7 +104,7 @@
 						<a href="{% url 'home' %}">EST</a>
           {% endlanguage %}
         {% endif %}
-        </div>-->
+      </div>
       </div>
     </div>
 
@@ -138,7 +138,7 @@
       </div>
 
       <footer>
-        <p class="pull-right"><a id="logIn" href="http://www.tam.ee/siseinfo/">Logi sisse</a></p>
+        <p class="pull-right"><a id="logIn" href="http://www.tam.ee/siseinfo/">{% trans "Logi sisse" %}</a></p>
         <p>
           &copy;
           <script language="JavaScript" type="text/javascript">
@@ -148,7 +148,7 @@
               theYear=theYear+1900;
             document.write(theYear)
           </script>
-          Tehnika&uuml;likooli Akadeemiline Meeskoor
+          {% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor" %}
         </p>
       </footer>
     </div>

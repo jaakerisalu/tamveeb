@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +24,9 @@
 <body>
 
 <div id="message">
-    <h1>Whoops</h1>
+    <h1>{% trans "Whoops" %}</h1>
 
-    <p>We're updating our servers. Please check back soon.</p>
+    <p>{% trans "We're updating our servers. Please check back soon." %}</p>
 </div>
 
 </body>

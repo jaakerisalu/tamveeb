@@ -1,15 +1,16 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block og_url %}http://www.meeskoor.ee/kontakt/{% endblock %}
-{% block og_title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt{% endblock %}
-{% block title %}Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt{% endblock %}
+{% block og_title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt" %}{% endblock %}
+{% block title %}{% trans "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt" %}{% endblock %}
 {% load staticfiles %}
 
 {% block content %}
     <div class="container-fluid">
     <div id="jumbotron" class="jumbotron" style="background-image: url({% static 'images/navbar/kontakt.jpg' %}); background-repeat: no-repeat; background-position: center;">
         <div style="padding-left: 4em; padding-right: 4em;">
-            <h1><span class="header-text">Kontakt</span></h1>
-            <p><span class="header-text">Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama ka kitsamas ringis.</span></p>
+            <h1><span class="header-text">{% trans "Kontakt" %}</span></h1>
+            <p><span class="header-text">{% trans "Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama ka kitsamas ringis." %}</span></p>
         </div>
     </div>
 
@@ -49,8 +50,8 @@
         <div class="container">
             <div id="featurette" class="row featurette">
                 <div id="featuretteText" class="col-md-9">
-                    <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">V&otilde;ta meiega &uuml;hendust</h2>
-                    <h3>{{ contact.choir }}</h3><p>Aadress: {{ contact.address }}<br>Telefon: {{ contact.phone }}<br>E-post: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> (lepingud, arved jms)<br>Koduleht: <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>Aadress: {{ contact.organization_address }}<br>Registri nr: {{ contact.registry_number }}<br>KM kohuslase nr: {{ contact.vat }}</p>
+                    <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">{% trans "V&otilde;ta meiega &uuml;hendust" %}</h2>
+                    <h3>{{ contact.choir }}</h3><p>{% trans "Aadress:" %} {{ contact.address }}<br>{% trans "Telefon:" %} {{ contact.phone }}<br>{% trans "E-post:" %} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> {% trans "(lepingud, arved jms)" %}<br>{% trans "Koduleht:" %} <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>{% trans "Aadress:" %} {{ contact.organization_address }}<br>{% trans "Registri nr:" %} {{ contact.registry_number }}<br>{% trans "KM kohuslase nr:" %} {{ contact.vat }}</p>
                 </div>
             </div>
         </div>
