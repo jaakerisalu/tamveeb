@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 14:34+0000\n"
+"POT-Creation-Date: 2016-12-23 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,25 @@ msgstr "Estonian"
 msgid "English"
 msgstr ""
 
+#: tamveeb/urls.py:19
+#| msgid "Muusika"
+msgid "^muusika/$"
+msgstr "^music/$"
+
+#: tamveeb/urls.py:20
+#| msgid "Meist"
+msgid "^meist/$"
+msgstr "^about/$"
+
+#: tamveeb/urls.py:21
+#| msgid "Kontakt"
+msgid "^kontakt/$"
+msgstr "^contact/$"
+
+#: tamveeb/urls.py:22
+msgid "^lisaleht/$"
+msgstr "^extra/$"
+
 #: templates/502.html:27
 msgid "Whoops"
 msgstr ""
@@ -51,13 +70,11 @@ msgstr "Forgot your password?"
 
 #: templates/base.html:12 templates/base.html.py:14 templates/base.html:18
 #: templates/base.html.py:20
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor"
 msgstr "Academic Male Choir of Tallinn University of Technology"
 
 #: templates/base.html:15
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht"
 msgstr "Academic Male Choir of Tallinn University of Technology"
@@ -177,7 +194,6 @@ msgstr ""
 "circles."
 
 #: templates/kontakt.html:4 templates/kontakt.html.py:5
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt"
 msgstr "Academic Male Choir of Tallinn University of Technology | Contact"
@@ -211,13 +227,11 @@ msgid "KM kohuslase nr:"
 msgstr "VAT ID:"
 
 #: templates/lisaleht.html:4 templates/lisaleht.html.py:5
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht"
 msgstr "Academic Male Choir of Tallinn University of Technology | Extra page"
 
 #: templates/meist.html:4 templates/meist.html.py:5
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist"
 msgstr "Academic Male Choir of Tallinn University of Technology | About us"
@@ -239,7 +253,6 @@ msgid "E-post"
 msgstr "E-mail"
 
 #: templates/muusika.html:4 templates/muusika.html.py:5
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Muusika"
 msgstr "Academic Male Choir of Tallinn University of Technology | Music"
@@ -339,7 +352,6 @@ msgid "Reset password"
 msgstr ""
 
 #: templates/topelttuur.html:4 templates/topelttuur.html.py:5
-#, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Topelttuur"
 msgstr "Academic Male Choir of Tallinn University of Technology"

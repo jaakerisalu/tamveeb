@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 14:34+0000\n"
+"POT-Creation-Date: 2016-12-23 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,22 @@ msgstr ""
 
 #: settings/base.py:103
 msgid "English"
+msgstr ""
+
+#: tamveeb/urls.py:19
+msgid "^muusika/$"
+msgstr ""
+
+#: tamveeb/urls.py:20
+msgid "^meist/$"
+msgstr ""
+
+#: tamveeb/urls.py:21
+msgid "^kontakt/$"
+msgstr ""
+
+#: tamveeb/urls.py:22
+msgid "^lisaleht/$"
 msgstr ""
 
 #: templates/502.html:27
