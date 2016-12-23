@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-22 15:29+0000\n"
+"POT-Creation-Date: 2016-12-23 14:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: settings/base.py:102
 msgid "Eesti keel"
-msgstr ""
+msgstr "Estonian"
 
 #: settings/base.py:103
 msgid "English"
@@ -50,7 +50,7 @@ msgid "Unustasid parooli?"
 msgstr "Forgot your password?"
 
 #: templates/base.html:12 templates/base.html.py:14 templates/base.html:18
-#: templates/base.html.py:20 templates/base.html:151
+#: templates/base.html.py:20
 #, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor"
@@ -70,7 +70,7 @@ msgstr "Choir, music, singing"
 msgid "Toggle navigation"
 msgstr "Lülita navigatsiooni"
 
-#: templates/base.html:55
+#: templates/base.html:55 templates/base.html.py:151
 msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgstr "Academic Male Choir of Tallinn University of Technology"
 
@@ -78,7 +78,7 @@ msgstr "Academic Male Choir of Tallinn University of Technology"
 msgid "Muusika"
 msgstr "Music"
 
-#: templates/base.html:65
+#: templates/base.html:65 templates/muusika.html:21
 msgid "Kontserdid"
 msgstr "Concerts"
 
@@ -153,6 +153,8 @@ msgid ""
 "Koor on osalenud paljudel koorikonkurssidel ja paistab silma mitmek&uuml;"
 "lgse tegevusega nii muusika alal kui ka seltsielus."
 msgstr ""
+"The choir has participated in many choir contests and excels in diverse "
+"activities from music to social life."
 
 #: templates/home.html:55 templates/home.html.py:64 templates/home.html:73
 msgid "Loe edasi..."
@@ -163,18 +165,22 @@ msgid ""
 "Tehnika&uuml;likooli Akadeemiline Meeskoor on Eesti suurim meeskoor, mis "
 "tegutseb alates 1945. aastast Tallinna Tehnika&uuml;likooli juures."
 msgstr ""
+"The choir is the biggest male choir in Estonia and has been active in "
+"Tallinn University of Technology since 1945."
 
 #: templates/home.html:73 templates/kontakt.html:13
 msgid ""
 "Lisaks avalikele kontsertidele oleme valmis oma piiritut laululusti jagama "
 "ka kitsamas ringis."
 msgstr ""
+"Besides public concerts we are also ready to share our song lust in narrower "
+"circles."
 
 #: templates/kontakt.html:4 templates/kontakt.html.py:5
 #, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt"
-msgstr "Academic Male Choir of Tallinn University of Technology"
+msgstr "Academic Male Choir of Tallinn University of Technology | Contact"
 
 #: templates/kontakt.html:54
 msgid "Aadress:"
@@ -208,13 +214,13 @@ msgstr "VAT ID:"
 #, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht"
-msgstr "Academic Male Choir of Tallinn University of Technology"
+msgstr "Academic Male Choir of Tallinn University of Technology | Extra page"
 
 #: templates/meist.html:4 templates/meist.html.py:5
 #, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist"
-msgstr "Academic Male Choir of Tallinn University of Technology"
+msgstr "Academic Male Choir of Tallinn University of Technology | About us"
 
 #: templates/meist.html:61
 msgid "Nimi"
@@ -236,7 +242,7 @@ msgstr "E-mail"
 #, fuzzy
 #| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Muusika"
-msgstr "Academic Male Choir of Tallinn University of Technology"
+msgstr "Academic Male Choir of Tallinn University of Technology | Music"
 
 #: templates/muusika.html:28
 msgid "Kuup&auml;ev"

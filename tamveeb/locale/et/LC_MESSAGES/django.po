@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-22 15:29+0000\n"
+"POT-Creation-Date: 2016-12-23 14:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Unustasid parooli?"
 msgstr ""
 
 #: templates/base.html:12 templates/base.html.py:14 templates/base.html:18
-#: templates/base.html.py:20 templates/base.html:151
+#: templates/base.html.py:20
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor"
 msgstr ""
 
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: templates/base.html:55
+#: templates/base.html:55 templates/base.html.py:151
 msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Muusika"
 msgstr ""
 
-#: templates/base.html:65
+#: templates/base.html:65 templates/muusika.html:21
 msgid "Kontserdid"
 msgstr ""
 
