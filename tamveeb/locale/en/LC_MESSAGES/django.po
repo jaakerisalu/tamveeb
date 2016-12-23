@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 14:43+0000\n"
+"POT-Creation-Date: 2016-12-23 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,17 +38,14 @@ msgid "English"
 msgstr ""
 
 #: tamveeb/urls.py:19
-#| msgid "Muusika"
 msgid "^muusika/$"
 msgstr "^music/$"
 
 #: tamveeb/urls.py:20
-#| msgid "Meist"
 msgid "^meist/$"
 msgstr "^about/$"
 
 #: tamveeb/urls.py:21
-#| msgid "Kontakt"
 msgid "^kontakt/$"
 msgstr "^contact/$"
 
@@ -70,12 +67,10 @@ msgstr "Forgot your password?"
 
 #: templates/base.html:12 templates/base.html.py:14 templates/base.html:18
 #: templates/base.html.py:20
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor"
 msgstr "Academic Male Choir of Tallinn University of Technology"
 
 #: templates/base.html:15
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemilise Meeskoori ametlik koduleht"
 msgstr "Academic Male Choir of Tallinn University of Technology"
 
@@ -96,12 +91,24 @@ msgid "Muusika"
 msgstr "Music"
 
 #: templates/base.html:65 templates/muusika.html:21
+msgid "kontserdid"
+msgstr "concerts"
+
+#: templates/base.html:65 templates/muusika.html:21
 msgid "Kontserdid"
 msgstr "Concerts"
 
 #: templates/base.html:66
+msgid "salvestised"
+msgstr "recordings"
+
+#: templates/base.html:66
 msgid "Salvestised"
 msgstr "Recordings"
+
+#: templates/base.html:67 templates/muusika.html:59
+msgid "repertuaar"
+msgstr "repertoire"
 
 #: templates/base.html:67 templates/muusika.html:59
 msgid "Repertuaar"
@@ -112,20 +119,40 @@ msgid "Meist"
 msgstr "About us"
 
 #: templates/base.html:73
+msgid "pohivaartused"
+msgstr "core values"
+
+#: templates/base.html:73
 msgid "P&otilde;hiv&auml;&auml;rtused"
 msgstr "The core values"
+
+#: templates/base.html:74
+msgid "traditsioonid"
+msgstr "traditions"
 
 #: templates/base.html:74
 msgid "Traditsioonid"
 msgstr "Traditions"
 
 #: templates/base.html:75
+msgid "dirigendid"
+msgstr "conductors"
+
+#: templates/base.html:75
 msgid "Dirigendid"
 msgstr "Conductors"
+
+#: templates/base.html:76
+msgid "juhatus"
+msgstr "management"
 
 #: templates/base.html:76 templates/meist.html:54
 msgid "Juhatus"
 msgstr "Management"
+
+#: templates/base.html:77
+msgid "ajalugu"
+msgstr "history"
 
 #: templates/base.html:77
 msgid "Ajalugu"
@@ -136,8 +163,16 @@ msgid "Kontakt"
 msgstr "Contact"
 
 #: templates/base.html:83 templates/kontakt.html:53
+msgid "votauhendust"
+msgstr "contact"
+
+#: templates/base.html:83 templates/kontakt.html:53
 msgid "V&otilde;ta meiega &uuml;hendust"
 msgstr "Contact us"
+
+#: templates/base.html:84
+msgid "telliesinemine"
+msgstr "bookus"
 
 #: templates/base.html:84
 msgid "Telli esinemine"
@@ -194,7 +229,6 @@ msgstr ""
 "circles."
 
 #: templates/kontakt.html:4 templates/kontakt.html.py:5
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Kontakt"
 msgstr "Academic Male Choir of Tallinn University of Technology | Contact"
 
@@ -227,12 +261,10 @@ msgid "KM kohuslase nr:"
 msgstr "VAT ID:"
 
 #: templates/lisaleht.html:4 templates/lisaleht.html.py:5
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Lisaleht"
 msgstr "Academic Male Choir of Tallinn University of Technology | Extra page"
 
 #: templates/meist.html:4 templates/meist.html.py:5
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Meist"
 msgstr "Academic Male Choir of Tallinn University of Technology | About us"
 
@@ -253,7 +285,6 @@ msgid "E-post"
 msgstr "E-mail"
 
 #: templates/muusika.html:4 templates/muusika.html.py:5
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Muusika"
 msgstr "Academic Male Choir of Tallinn University of Technology | Music"
 
@@ -352,7 +383,6 @@ msgid "Reset password"
 msgstr ""
 
 #: templates/topelttuur.html:4 templates/topelttuur.html.py:5
-#| msgid "Tehnikaülikooli Akadeemiline Meeskoor"
 msgid "Tehnika&uuml;likooli Akadeemiline Meeskoor | Topelttuur"
 msgstr "Academic Male Choir of Tallinn University of Technology"
 

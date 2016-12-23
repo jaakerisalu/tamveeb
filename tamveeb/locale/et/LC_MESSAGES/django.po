@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-23 14:43+0000\n"
+"POT-Creation-Date: 2016-12-23 15:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,11 +92,23 @@ msgid "Muusika"
 msgstr ""
 
 #: templates/base.html:65 templates/muusika.html:21
+msgid "kontserdid"
+msgstr ""
+
+#: templates/base.html:65 templates/muusika.html:21
 msgid "Kontserdid"
 msgstr ""
 
 #: templates/base.html:66
+msgid "salvestised"
+msgstr ""
+
+#: templates/base.html:66
 msgid "Salvestised"
+msgstr ""
+
+#: templates/base.html:67 templates/muusika.html:59
+msgid "repertuaar"
 msgstr ""
 
 #: templates/base.html:67 templates/muusika.html:59
@@ -108,7 +120,15 @@ msgid "Meist"
 msgstr ""
 
 #: templates/base.html:73
+msgid "pohivaartused"
+msgstr ""
+
+#: templates/base.html:73
 msgid "P&otilde;hiv&auml;&auml;rtused"
+msgstr ""
+
+#: templates/base.html:74
+msgid "traditsioonid"
 msgstr ""
 
 #: templates/base.html:74
@@ -116,11 +136,23 @@ msgid "Traditsioonid"
 msgstr ""
 
 #: templates/base.html:75
+msgid "dirigendid"
+msgstr ""
+
+#: templates/base.html:75
 msgid "Dirigendid"
+msgstr ""
+
+#: templates/base.html:76
+msgid "juhatus"
 msgstr ""
 
 #: templates/base.html:76 templates/meist.html:54
 msgid "Juhatus"
+msgstr ""
+
+#: templates/base.html:77
+msgid "ajalugu"
 msgstr ""
 
 #: templates/base.html:77
@@ -132,7 +164,15 @@ msgid "Kontakt"
 msgstr ""
 
 #: templates/base.html:83 templates/kontakt.html:53
+msgid "votauhendust"
+msgstr ""
+
+#: templates/base.html:83 templates/kontakt.html:53
 msgid "V&otilde;ta meiega &uuml;hendust"
+msgstr ""
+
+#: templates/base.html:84
+msgid "telliesinemine"
 msgstr ""
 
 #: templates/base.html:84

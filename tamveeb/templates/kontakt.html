@@ -50,7 +50,7 @@
         <div class="container">
             <div id="featurette" class="row featurette">
                 <div id="featuretteText" class="col-md-9">
-                    <h2 id="votauhendust" class="featurette-heading" style="margin-top: -1px;">{% trans "V&otilde;ta meiega &uuml;hendust" %}</h2>
+                    <h2 id="{% trans 'votauhendust' %}" class="featurette-heading" style="margin-top: -1px;">{% trans "V&otilde;ta meiega &uuml;hendust" %}</h2>
                     <h3>{{ contact.choir }}</h3><p>{% trans "Aadress:" %} {{ contact.address }}<br>{% trans "Telefon:" %} {{ contact.phone }}<br>{% trans "E-post:" %} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>, <a href="mailto:{{ contact.finance_email }}">{{ contact.finance_email }}</a> {% trans "(lepingud, arved jms)" %}<br>{% trans "Koduleht:" %} <a href="{{ contact.homepage }}">{{ contact.homepage }}/</a></p><h3>{{ contact.organization }}</h3><p>{% trans "Aadress:" %} {{ contact.organization_address }}<br>{% trans "Registri nr:" %} {{ contact.registry_number }}<br>{% trans "KM kohuslase nr:" %} {{ contact.vat }}</p>
                 </div>
             </div>

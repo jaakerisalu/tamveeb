@@ -62,26 +62,26 @@
                 <li class="dropdown">
                   <a href="{% url 'muusika' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Muusika" %} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-										<li><a href="{% url 'muusika' %}#kontserdid">{% trans "Kontserdid" %}</a></li>
-										<!--<li><a href="muusika.html#salvestised">{% trans "Salvestised" %}</a></li>-->
-										<li><a href="{% url 'muusika' %}#repertuaar">{% trans "Repertuaar" %}</a></li>
+										<li><a href="{% url 'muusika' %}#{% trans 'kontserdid' %}">{% trans "Kontserdid" %}</a></li>
+										<!--<li><a href="muusika.html#{% trans 'salvestised' %}">{% trans "Salvestised" %}</a></li>-->
+										<li><a href="{% url 'muusika' %}#{% trans 'repertuaar' %}">{% trans "Repertuaar" %}</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
                   <a href="{% url 'meist' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Meist" %} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="{% url 'meist' %}#pohivaartused">{% trans "P&otilde;hiv&auml;&auml;rtused" %}</a></li>
-                      <li><a href="{% url 'meist' %}#traditsioonid">{% trans "Traditsioonid" %}</a></li>
-                      <li><a href="{% url 'meist' %}#dirigendid">{% trans "Dirigendid" %}</a></li>
-                      <li><a href="{% url 'meist' %}#juhatus">{% trans "Juhatus" %}</a></li>
-                      <li><a href="{% url 'meist' %}#ajalugu">{% trans "Ajalugu" %}</a></li>
+                      <li><a href="{% url 'meist' %}#{% trans 'pohivaartused' %}">{% trans "P&otilde;hiv&auml;&auml;rtused" %}</a></li>
+                      <li><a href="{% url 'meist' %}#{% trans 'traditsioonid' %}">{% trans "Traditsioonid" %}</a></li>
+                      <li><a href="{% url 'meist' %}#{% trans 'dirigendid' %}">{% trans "Dirigendid" %}</a></li>
+                      <li><a href="{% url 'meist' %}#{% trans 'juhatus' %}">{% trans "Juhatus" %}</a></li>
+                      <li><a href="{% url 'meist' %}#{% trans 'ajalugu' %}">{% trans "Ajalugu" %}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                   <a href="{% url 'kontakt' %}" class="dropdown-toggle disabled" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Kontakt" %} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="{% url 'kontakt' %}#votauhendust">{% trans "V&otilde;ta meiega &uuml;hendust" %}</a></li>
-                    <li><a href="{% url 'kontakt' %}#telliesinemine">{% trans "Telli esinemine" %}</a></li>
+                    <li><a href="{% url 'kontakt' %}#{% trans 'votauhendust' %}">{% trans "V&otilde;ta meiega &uuml;hendust" %}</a></li>
+                    <li><a href="{% url 'kontakt' %}#{% trans 'telliesinemine' %}">{% trans "Telli esinemine" %}</a></li>
                   </ul>
                 </li>
 
